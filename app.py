@@ -2,6 +2,9 @@ from flask import Flask, render_template, request, json, redirect, session, url_
 from flaskext.mysql import MySQL
 from werkzeug.security import generate_password_hash, check_password_hash
 from datetime import datetime
+import html
+# html.escape() can be used to avoid XSS, but because of current bootstrap, 
+# it is not convinient to show on original characters on html files
 
 
 app = Flask(__name__)
