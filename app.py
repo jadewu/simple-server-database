@@ -573,8 +573,8 @@ def retrieveIns():
         return json.dumps({'response':insre, 'ins_number':ins[0]})
 
     except Exception as e:
-        #return "Please enter a valid insurance number! "
-        return e
+        return "Please enter a valid insurance number! "
+      # return e
 
 
 @app.route('/deleteIns', methods=['POST'])
