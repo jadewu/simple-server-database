@@ -31,9 +31,10 @@ CREATE TABLE IF NOT EXISTS `WDS`.`user` (
   `user_name` VARCHAR(45) NOT NULL COMMENT 'User name',
   `user_username` VARCHAR(45) NOT NULL COMMENT 'This is the email address for login',
   `user_password` VARCHAR(256) NOT NULL COMMENT 'Password for login',
-  PRIMARY KEY (`user_id`))
+  PRIMARY KEY (`user_id`),
+  UNIQUE INDEX `user_username_idx` (`user_username` ASC) VISIBLE)
 ENGINE = InnoDB
-AUTO_INCREMENT = 10
+AUTO_INCREMENT = 12
 DEFAULT CHARACTER SET = utf8;
 
 
